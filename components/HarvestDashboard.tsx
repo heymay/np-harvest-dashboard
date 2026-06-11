@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import Image from "next/image";
 import {
   Clock,
   Users,
@@ -258,15 +259,11 @@ export default function HarvestDashboard() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center gap-3">
-        <div className="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center">
-          <Clock size={16} className="text-white" />
-        </div>
-        <div>
-          <h1 className="text-lg font-bold text-gray-900">
-            Harvest Time Dashboard
-          </h1>
-          <p className="text-xs text-gray-500">National Positions</p>
+      <header className="bg-white border-b border-gray-200 px-6 py-3 flex items-center justify-between">
+        <Image src="/logo.png" alt="National Positions" width={180} height={44} priority />
+        <div className="flex items-center gap-2 text-sm text-gray-500">
+          <Clock size={14} className="text-orange-500" />
+          Harvest Time Dashboard
         </div>
       </header>
 
